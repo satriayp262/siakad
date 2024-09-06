@@ -1,4 +1,4 @@
 # SIAKAD
 
 ERD SIAKAD
-![ERD](images/erd_siakad.png)
+![ERD](https://github.com/username/repository/raw/main/public/images/erd_siakad.png)
