@@ -15,11 +15,9 @@
         <div class="flex flex-col flex-1">
             <main class="flex-1 md:ml-64 mb-16">
                 @yield('content')
-
-                @include('template.footer')
             </main>
+            @include('template.footer', ['class' => 'mt-auto'])
         </div>
     </div>
 </body>
 </html>
-

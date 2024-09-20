@@ -1,3 +1,3 @@
-<footer class="bg-gray-800 text-white p-4 text-center w-full mt-auto">
-    <p>&copy; {{ date('Y') }} SIAKAD. All rights reserved.</p>
+<footer class="bg-gray-800 text-white p-4 w-full mt-auto">
+    <p class="text-sm text-center md:text-right">&copy; {{ date('Y') }} SIAKAD. All rights reserved.</p>
 </footer>

@@ -23,10 +23,10 @@
                     Login
                 </button>
             </div>
+            <p class="mt-4 text-center text-gray-600">Belum punya akun?
+                <a href="{{ route('register') }}" class="text-blue-500 hover:text-blue-700">Buat akun</a>
+            </p>
         </form>
-        <p class="mt-4 text-center text-gray-600">Belum punya akun?
-            <a href="{{ route('register') }}" class="text-blue-500 hover:text-blue-700">Buat akun</a>
-        </p>
     </div>
 </body>
 </html>
