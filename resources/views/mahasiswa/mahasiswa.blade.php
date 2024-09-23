@@ -43,7 +43,7 @@
         <h1 class="text-2xl font-bold">Welcome to the Mahasiswa Page</h1>
         <p>This is the content of the mahasiswa page.</p>
         <p>
-            Hello, {{ Auth::user()->name }}. You are logged in as a Mahasiswa.
+            Hello, {{ Auth::user()->name }}. You are logged in as a {{ Auth::user()->role }}.
         </p>
     </div>
 @endsection
