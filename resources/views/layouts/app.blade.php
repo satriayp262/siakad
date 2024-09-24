@@ -16,30 +16,16 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('template.navbar')
-
-            <!-- Page Heading -->
-            {{-- @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset --}}
-
-            {{-- <!-- Page Content -->
-            <main>
-                @include('template.navbar')
-            </main> --}}
+            @include('livewire.component.navbar')
 
             <div class="flex flex-col md:flex-row flex-1">
-                @include('template.sidebar')
+                @include('livewire.component.sidebar')
 
                 <div class="flex flex-col flex-1">
                     <main class="flex-1 md:ml-64 mb-16">
                         @yield('content')
                     </main>
-                    @include('template.footer', ['class' => 'mt-auto'])
+                    @include('livewire.component.footer', ['class' => 'mt-auto'])
                 </div>
             </div>
         </div>
