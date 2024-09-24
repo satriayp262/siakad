@@ -27,6 +27,9 @@ class PasswordResetLinkController extends Controller
     {
         $request->validate([
             'email' => ['required', 'email'],
+        ], [
+            'email.required' => 'The email field is required.',
+            'email.email' => 'Please enter a valid email address.',
         ]);
 
         // We will send the password reset link to this user. Once we have attempted
@@ -35,10 +38,15 @@ class PasswordResetLinkController extends Controller
         $status = Password::sendResetLink(
             $request->only('email')
         );
+        // to get token
+        // dd(Password::RESET_LINK_SENT
+        // ? back()->with('status', __($status))
+        // : back()->withInput($request->only('email'))
+        //         ->withErrors(['email' => __($status)]));
 
         return $status == Password::RESET_LINK_SENT
-                    ? back()->with('status', __($status))
-                    : back()->withInput($request->only('email'))
-                            ->withErrors(['email' => __($status)]);
+        ? back()->with('status', $request->input('_token')) // Custom success message
+        : back()->withInput($request->only('email'))
+                ->withErrors(['email' => 'Failed to send password reset link. Please try again.']); // Custom error message
     }
 }
