@@ -41,6 +41,6 @@
         </div>
 
         <h1 class="text-2xl font-bold">Welcome to the Prodi Page</h1>
-        <p>This is the content of the prodi page.</p>
+
     </div>
 @endsection
