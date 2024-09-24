@@ -1,9 +1,9 @@
-<nav class=" bg-white border-gray-200 dark:bg-gray-900">
+<nav class=" bg-gray-800 border-gray-200">
     <div class="flex items-center justify-between p-4">
 
         <div class="flex items-center space-x-2">
             <button id="sidebarToggle" aria-controls="default-sidebar" type="button"
-                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-transparent focus:outline-none dark:text-gray-400 dark:hover:bg-transparent dark:focus:outline-none">
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-transparent focus:outline-none">
                 <span class="sr-only">Open sidebar</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
@@ -16,14 +16,14 @@
             <img src="{{ asset('img/piksi.png') }}" class="h-8 w-auto max-w-full" alt="logopiksi" />
 
             <span
-                class="hidden sm:block self-center text-sm md:text-lg lg:text-xl font-semibold whitespace-nowrap dark:text-white">
+                class="hidden sm:block self-center text-white text-sm md:text-lg lg:text-xl font-semibold whitespace-nowrap">
                 POLITEKNIK PIKSI GANESHA INDONESIA
             </span>
         </div>
 
         <div class="relative">
             <button type="button"
-                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300"
                 id="user-menu-button" aria-expanded="false">
                 <span class="sr-only">Open user menu</span>
                 <svg class="w-8 h-8 rounded-full text-gray-400" fill="currentColor" viewBox="0 0 20 20"
@@ -33,24 +33,24 @@
                 </svg>
             </button>
 
-            <div class="z-50 hidden absolute right-0 top-full mt-2 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+            <div class="z-50 hidden absolute right-0 top-full mt-2 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow"
                 id="user-dropdown">
                 <div class="px-4 py-3">
-                    <span class="block text-sm text-gray-900 dark:text-white">{{ Auth::user()->name }}</span>
-                    <span class="block text-sm text-gray-500 truncate dark:text-gray-400">{{ Auth::user()->email }}</span>
+                    <span class="block text-sm text-gray-900">{{ Auth::user()->name }}</span>
+                    <span class="block text-sm text-gray-500 truncate">{{ Auth::user()->email }}</span>
                 </div>
                 <ul class="py-2" aria-labelledby="user-menu-button">
                     <li>
                         <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
                     </li>
                     <li>
                         <a href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign
                             out</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             @csrf
