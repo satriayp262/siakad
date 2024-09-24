@@ -22,4 +22,8 @@ Route::get('/prodi', function () {return view('prodi.prodi');})->name('prodi');
 Route::get('/mahasiswa', function () {return view('mahasiswa.mahasiswa');})->name('mahasiswa');
 Route::get('/mata_kuliah', function () {return view('mata_kuliah.mata_kuliah');})->name('mata_kuliah');
 
+Route::prefix('mat_kuliah')->group(function () {
+    Route::get('/', App\Livewire\Admin\MataKuliah\Index::class)->name('mata_kuliah)');
+});
+
 require __DIR__.'/auth.php';
